@@ -358,12 +358,24 @@ namespace PlainSample
         {
             string countCommand = Commands.Count("twitter", "tweet").Pretty();
 
-            string query = new SingleQueryBuilder<Tweet>()
+
+            //string query = new QueryBuilder<Tweet>()
+            //    .Query(qry => qry
+            //        .Term(term => term
+            //            .Field(tweet => tweet.User)
+            //            .Value("testUser".ToLower()) // by default terms query requires lowercased values.
+            //            .Boost(5)
+            //         )
+            //    ).BuildBeautified();
+
+            string query = new QueryBuilder<Tweet>()
+                                .Query(qry => qry
                                     .Term(t => t
                                         .Field(x => x.User)
                                         .Value("testuser")
+                                        .Boost(5)
                                     )
-                                    .BuildBeautified();  // or .Buid(); to get condensed single line query.
+                                ).BuildBeautified();  // or .Buid(); to get condensed single line query.
 
             /* or alternatively  
             query = new TermQuery<Tweet>()
