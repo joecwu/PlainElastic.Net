@@ -19,7 +19,7 @@ namespace PlainElastic.Net.Builders.Commands
 
         protected override string BuildUrlPath()
         {
-            return UrlBuilder.BuildUrlPath(Index, "_aliases", Alias);
+            return UrlBuilder.BuildUrlPath(Index, "_alias", Alias);
         }
     }
 }
