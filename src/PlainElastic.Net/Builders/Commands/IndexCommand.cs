@@ -63,7 +63,8 @@ namespace PlainElastic.Net
 
         public IndexCommand Refresh(bool refresh = true)
         {
-            WithParameter("refresh", refresh.AsString());
+            // 7.x remove refersh support.
+            //WithParameter("refresh", refresh.AsString());
             return this;
         }
         
