@@ -62,7 +62,7 @@ namespace PlainElastic.Net.IndexSettings
             if (body.IsNullOrEmpty())
                 return "";
 
-            return "{{ 'index': {{ {0} }} }}".AltQuoteF(body);
+            return "{{ 'settings': {{ {0} }} }}".AltQuoteF(body);
         }
     }
 }
