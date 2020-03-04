@@ -20,9 +20,15 @@ namespace PlainElastic.Net.Serialization
 
         public class SearchHits
         {
-            public int total;
+            public Total total;
             public double ?max_score;
             public Hit[] hits;
+        }
+
+        public class Total
+        {
+            public int value;
+            public string relation;
         }
 
         public class Hit
