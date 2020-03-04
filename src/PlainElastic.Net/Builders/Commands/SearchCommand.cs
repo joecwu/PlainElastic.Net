@@ -88,6 +88,15 @@ namespace PlainElastic.Net
         }
 
         /// <summary>
+        /// Track Total Hits.
+        /// </summary>
+        public SearchCommand TrackTotalHits(string trackTotalHits = "true")
+        {
+            WithParameter("track_total_hits", trackTotalHits);
+            return this;
+        }
+
+        /// <summary>
         /// The selective fields of the document to return for each hit.
         /// </summary>
         public SearchCommand Fields(string fields)
