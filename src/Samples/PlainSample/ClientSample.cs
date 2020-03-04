@@ -47,7 +47,7 @@ namespace PlainSample
 
             GetResult<Tweet> getResult = client.Get(new GetCommand(index: "twitter", type: "tweet", id: "2"));
 
-            SearchResult<Tweet> searchResult = client.Search(new SearchCommand("twitter", "tweet"),
+            SearchResult<Tweet> searchResult = client.Search(new SearchCommand("twitter", "tweet").TrackTotalHits(),
                                                             new QueryBuilder<Tweet>()
                                                             .Query(q => q
                                                                 .Term(t => t
