@@ -114,7 +114,9 @@ namespace PlainSample
             Console.WriteLine("     failed: " + searchResult._shards.failed);
 
             Console.WriteLine(" hits: ");
-            Console.WriteLine("     total: " + searchResult.hits.total);
+            Console.WriteLine("     total: ");
+            Console.WriteLine("         value: " + searchResult.hits.total.value);
+            Console.WriteLine("         relation: " + searchResult.hits.total.relation);
             Console.WriteLine("     max_score: " + searchResult.hits.max_score);
             Console.WriteLine("     hits: ");
             foreach (var hit in searchResult.hits.hits)

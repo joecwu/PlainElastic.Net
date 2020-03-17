@@ -44,7 +44,7 @@ namespace PlainElastic.Net.Tests.Serialization
             
 
         It should_contain_correct_hits_count = () =>
-            result.hits.total.ShouldEqual(3000);
+            result.hits.total.value.ShouldEqual(3000);
 
         It should_contain_Segment_facet_with_filter_type = () =>
             result.facets["Segment"]._type.ShouldEqual("filter");

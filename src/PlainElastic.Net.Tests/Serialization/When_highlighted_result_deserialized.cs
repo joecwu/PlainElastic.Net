@@ -19,7 +19,10 @@ namespace PlainElastic.Net.Tests.Serialization
         'failed': 0
     },
     'hits': {
-        'total': 1,
+        'total': {
+            'value': 1,
+            'relation': 'eq'
+        },
         'max_score': 1.0,
         'hits': [
             {
@@ -55,7 +58,7 @@ namespace PlainElastic.Net.Tests.Serialization
             
 
         It should_contain_correct_hits_count = () =>
-            result.hits.total.ShouldEqual(1);
+            result.hits.total.value.ShouldEqual(1);
 
          It should_contain_hit_with_highlighted_Name_field_with_highlighted_fragment = () =>
             result.hits.hits[0].highlight["Name"].Single().ShouldEqual("<em>Highlight</em> Test, Inc.");

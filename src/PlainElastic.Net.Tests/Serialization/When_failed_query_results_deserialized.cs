@@ -82,7 +82,7 @@ namespace PlainElastic.Net.Tests.Serialization
             result._shards.failures[0].reason.ShouldEqual("No active shards");
 
         It should_contain_correct_hits_count = () => 
-            result.hits.total.ShouldEqual(1);
+            result.hits.total.value.ShouldEqual(1);
 
         private static JsonNetSerializer jsonSerializer;
         private static SearchResult<object> result;

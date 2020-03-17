@@ -65,7 +65,7 @@ namespace PlainElastic.Net.Tests.Serialization
             
 
         It should_contain_correct_hits_count = () =>
-            result.hits.total.ShouldEqual(100);
+            result.hits.total.value.ShouldEqual(100);
 
         It should_contain_TestTerms_facet_with_terms_type = () =>
             result.facets["TestTerms"]._type.ShouldEqual("terms");

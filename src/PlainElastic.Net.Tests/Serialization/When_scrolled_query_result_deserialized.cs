@@ -39,7 +39,7 @@ namespace PlainElastic.Net.Tests.Serialization
             
 
         It should_contain_correct_hits_count = () => 
-                                                    result.hits.total.ShouldEqual(1080);
+                                                    result.hits.total.value.ShouldEqual(1080);
 
         It should_contain_correct_scroll_id = () =>
                                                  result._scroll_id.ShouldEqual("c2NhbjsxMDsyNjgwNjpiY01CUVkwZ1NuS2QzN0phbVVlRXN3OzI2ODA4OmJjTUJRWTBnU25LZDM3SmFtVWVFc3c7MjY4MDQ6YmNNQlFZMGdTbktkMzdKYW1VZUVzdzsyNjgwMjpiY01CUVkwZ1NuS2QzN0phbVVlRXN3OzI2ODA1OmJjTUJRWTBnU25LZDM3SmFtVWVFc3c7MjY4MDc6YmNNQlFZMGdTbktkMzdKYW1VZUVzdzsyNjgwMzpiY01CUVkwZ1NuS2QzN0phbVVlRXN3OzI2ODAxOmJjTUJRWTBnU25LZDM3SmFtVWVFc3c7MjY4MDk6YmNNQlFZMGdTbktkMzdKYW1VZUVzdzsyNjgxMDpiY01CUVkwZ1NuS2QzN0phbVVlRXN3OzE7dG90YWxfaGl0czoxMDg4OTgwOw==");

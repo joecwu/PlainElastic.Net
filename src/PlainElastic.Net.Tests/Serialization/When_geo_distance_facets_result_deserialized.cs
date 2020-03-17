@@ -60,7 +60,7 @@ namespace PlainElastic.Net.Tests.Serialization
             
 
         It should_contain_correct_hits_count = () =>
-            result.hits.total.ShouldEqual(2);
+            result.hits.total.value.ShouldEqual(2);
 
         It should_contain_geo1_facet_with_filter_type = () =>
             result.facets["geo1"]._type.ShouldEqual("geo_distance");

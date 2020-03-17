@@ -83,7 +83,7 @@ namespace PlainElastic.Net.Tests.Serialization
             
 
         It should_contain_correct_hits_count = () => 
-                                                    result.hits.total.ShouldEqual(2);
+                                                    result.hits.total.value.ShouldEqual(2);
 
         It should_contain_4_sort_results_for_first_hit = () =>
                                                             result.hits.hits[0].sort.Length.ShouldEqual(4);
